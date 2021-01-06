@@ -28,12 +28,7 @@ public class TheStick : Singleton<TheStick>
     private void Update()
     {
         //Set the stick position
-
-        if (rightHand == null)
-        {
-            rightHand = PlayerMovement.Instance.GetComponentInChildren<RightHand>().transform;
-        }
-        if (rightHand != null && !isJumping)
+        if (!isJumping)
         {
             transform.position = rightHand.position;
         }
